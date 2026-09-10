@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.pyc
+.mplconfig/
+results_3epochs/
+results_baseline/
+results_benchmark/
+results_notebook2/
+results_gradio/
+app_chroma_store/
+app_logs/
+chroma_schema_store/
+rag_evaluation/
+spider_evaluation*/
+spider_benchmark*/
+data/
+*.safetensors
+*.bin
+*.pt
+*.pth
+.env
+access_token
+kaggle.json
+.aws/
+.agents/
+.codex/
+*.log
+lora_sql_adapter/
+baseline_60steps/*
+!baseline_60steps/BASELINE_REPORT.md
+# Local history helper and unrelated workspace material.
+/commit_notebook2.sh
+/REPORT.md
+/braitenberg.py
+/braitenberg_paths.png
+/Lab Sheet Simulating Braitenberg Vehicles in Python.pdf
