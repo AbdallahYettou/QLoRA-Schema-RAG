@@ -1,0 +1,26 @@
+{
+  "method": "SQLite EXPLAIN against schema-only in-memory database; not execution accuracy",
+  "checks": {
+    "baseline_60steps": {
+      "Test 1 (Simple Aggregate)": {
+        "syntax_parse": true,
+        "schema_prepares": true
+      }
+    },
+    "full_3epochs": {
+      "Test 1 (Simple Aggregate)": {
+        "syntax_parse": true,
+        "schema_prepares": true
+      },
+      "Test 2 (JOIN Query)": {
+        "syntax_parse": true,
+        "schema_prepares": false,
+        "error": "no such table: artist"
+      },
+      "Test 3 (GROUP BY + HAVING)": {
+        "syntax_parse": true,
+        "schema_prepares": true
+      }
+    }
+  }
+}

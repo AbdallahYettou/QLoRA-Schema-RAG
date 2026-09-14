@@ -1,0 +1,116 @@
+{
+  "baseline_60steps": {
+    "source_root": "results_baseline",
+    "trainer_state": "results_baseline/outputs_qlora_sql/checkpoint-60/trainer_state.json",
+    "logs": [
+      "results_baseline/qlora-text2sql-qwen2-5-coder.log"
+    ],
+    "global_step": 60,
+    "epoch": 0.06857142857142857,
+    "first_logged_loss": {
+      "step": 5,
+      "epoch": 0.005714285714285714,
+      "loss": 2.469704437255859,
+      "learning_rate": 8e-05
+    },
+    "last_logged_loss": {
+      "step": 60,
+      "epoch": 0.06857142857142857,
+      "loss": 0.6532120704650879,
+      "learning_rate": 4.000000000000001e-06
+    },
+    "peak_allocated_vram_gib": 5.97,
+    "training_wall_seconds_from_log_markers": 212.768722385,
+    "last_kernel_log_elapsed_seconds": 431.725850502,
+    "trainer_final_summary": null,
+    "inference": {
+      "Test 1 (Simple Aggregate)": "SELECT count(*) FROM singer"
+    },
+    "adapter": {
+      "base_model": "unsloth/Qwen2.5-Coder-7B-Instruct-bnb-4bit",
+      "rank": 16,
+      "alpha": 16,
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "parameters": 40370176,
+      "tensor_dtypes": [
+        "F32"
+      ],
+      "weights_bytes": 161533192,
+      "sha256": "25808ef35894e329702aed2101bfe9300bfe6ffc4925428bb07a678e19e84d64"
+    },
+    "hardware_log_lines": [
+      "[GPU Init] Total VRAM: 14.56 GB",
+      "==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1",
+      "   \\\\   /|    Num examples = 7,000 | Num Epochs = 1 | Total steps = 60",
+      "==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1",
+      "   \\\\   /|    Num examples = 7,000 | Num Epochs = 1 | Total steps = 60"
+    ],
+    "loss_points": 12
+  },
+  "full_3epochs": {
+    "source_root": "results_3epochs",
+    "trainer_state": "results_3epochs/outputs_qlora_sql_3epochs/checkpoint-2625/trainer_state.json",
+    "logs": [
+      "results_3epochs/qlora-text2sql-3epochs.log"
+    ],
+    "global_step": 2625,
+    "epoch": 3.0,
+    "first_logged_loss": {
+      "step": 25,
+      "epoch": 0.02857142857142857,
+      "loss": 2.1527090454101563,
+      "learning_rate": 6.0759493670886084e-05
+    },
+    "last_logged_loss": {
+      "step": 2625,
+      "epoch": 3.0,
+      "loss": 0.19199129104614257,
+      "learning_rate": 7.61294857154482e-11
+    },
+    "peak_allocated_vram_gib": 5.98,
+    "training_wall_seconds_from_log_markers": 9359.413755386,
+    "last_kernel_log_elapsed_seconds": 9573.187466749,
+    "trainer_final_summary": null,
+    "inference": {
+      "Test 1 (Simple Aggregate)": "SELECT count(*) FROM singer",
+      "Test 2 (JOIN Query)": "SELECT T3.Name FROM concert AS T1 JOIN artist AS T2 ON T1.Artist_ID  =  T2.Artist_ID JOIN singer AS T3 ON T2.Singer_ID  =  T3.Singer_ID WHERE T1.Year  =  2020",
+      "Test 3 (GROUP BY + HAVING)": "SELECT Country ,  COUNT(*) FROM singer GROUP BY Country HAVING COUNT(*)  >  1"
+    },
+    "adapter": {
+      "base_model": "unsloth/Qwen2.5-Coder-7B-Instruct-bnb-4bit",
+      "rank": 16,
+      "alpha": 16,
+      "target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "parameters": 40370176,
+      "tensor_dtypes": [
+        "F32"
+      ],
+      "weights_bytes": 161533192,
+      "sha256": "961d13a4c49a15b92e1a0801f72e86253f4c4f5f7665786e9e758fd6ad1f5a9a"
+    },
+    "hardware_log_lines": [
+      "[Hardware Init] GPU: Tesla T4 | VRAM: 14.56 GB",
+      "==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1",
+      "   \\\\   /|    Num examples = 7,000 | Num Epochs = 3 | Total steps = 2,625",
+      "==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1",
+      "   \\\\   /|    Num examples = 7,000 | Num Epochs = 3 | Total steps = 2,625"
+    ],
+    "loss_points": 105
+  }
+}

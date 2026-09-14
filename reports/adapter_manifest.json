@@ -1,0 +1,21 @@
+{
+  "base_model": "unsloth/Qwen2.5-Coder-7B-Instruct-bnb-4bit",
+  "rank": 16,
+  "alpha": 16,
+  "target_modules": [
+    "down_proj",
+    "gate_proj",
+    "k_proj",
+    "o_proj",
+    "q_proj",
+    "up_proj",
+    "v_proj"
+  ],
+  "parameters": 40370176,
+  "tensor_dtypes": [
+    "F32"
+  ],
+  "weights_bytes": 161533192,
+  "sha256": "961d13a4c49a15b92e1a0801f72e86253f4c4f5f7665786e9e758fd6ad1f5a9a",
+  "matches_checkpoint_2625": true
+}

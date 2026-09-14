@@ -1,0 +1,10 @@
+# Core versions match the downloaded Kaggle run's model-card/config metadata.
+# Install a CUDA-compatible PyTorch build for the host before these packages.
+-r requirements-eval.txt
+transformers==5.17.0
+peft==0.21.2
+datasets==4.8.5
+tokenizers==0.23.3
+accelerate>=1.0
+bitsandbytes>=0.45
+safetensors>=0.5

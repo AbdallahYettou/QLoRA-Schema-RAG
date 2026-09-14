@@ -1,0 +1,6 @@
+# CPU scoring and Hugging Face publishing (no GPU required).
+sqlglot==30.30.0
+pandas>=2.2
+huggingface_hub>=0.34
+
+# For GPU generation additionally install requirements-gpu.txt.
