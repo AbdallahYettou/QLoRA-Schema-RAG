@@ -1,0 +1,19 @@
+{
+  "id": "yettouabdallah/qlora-schema-aware-rag-sql",
+  "title": "QLoRA Schema Aware RAG SQL",
+  "code_file": "notebook2_schema_rag.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "yousufqureshi5/spider-sqlite-databases"
+  ],
+  "kernel_sources": [
+    "yettouabdallah/qlora-text2sql-3epochs",
+    "yettouabdallah/qlora-spider-benchmark-100"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}
