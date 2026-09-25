@@ -1,0 +1,19 @@
+{
+  "id": "yettouabdallah/qlora-schema-rag-gradio",
+  "title": "QLoRA Schema RAG Gradio",
+  "code_file": "gradio_text2sql.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "yousufqureshi5/spider-sqlite-databases"
+  ],
+  "kernel_sources": [
+    "yettouabdallah/qlora-text2sql-3epochs",
+    "yettouabdallah/qlora-schema-aware-rag-sql"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}
